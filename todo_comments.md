@@ -1,0 +1,22 @@
+# Todo Comments Checklist
+
+- [x] src/websocket-server.ts
+- [x] src/app/api/game/start/route.ts
+- [x] src/app/api/game/submit/route.ts
+- [x] src/app/layout.tsx
+- [x] src/app/page.tsx
+- [x] src/components/ExecutionOutput.tsx
+- [x] src/components/GameHeader.tsx
+- [x] src/components/GameOver.tsx
+- [x] src/components/GameSetup.tsx
+- [x] src/components/OpponentViewerPanel.tsx
+- [x] src/components/PlayerEditorPanel.tsx
+- [x] src/components/ResultsPanel.tsx
+- [x] src/components/TaskDisplay.tsx
+- [x] src/lib/api-utils.ts
+- [x] src/lib/tasks.ts
+- [x] src/store/gameStore.ts
+- [x] src/types/index.ts
+- [x] next.config.ts
+- [x] eslint.config.mjs
+- [x] postcss.config.mjs

@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000; /* Black background */
+  --foreground: #33ff33; /* Bright green text */
+  --accent: #9d4edd; /* Cyberpunk purple for accents */
 }
+
+/* No dark mode override needed if we always want the dark theme */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #33ff33;
+  }
+}
+*/
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Keep Geist fonts if available, otherwise fallback */
+  --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(
+    --font-geist-mono,
+    ui-monospace,
+    Menlo,
+    Monaco,
+    "Cascadia Mono",
+    "Segoe UI Mono",
+    "Roboto Mono",
+    "Oxygen Mono",
+    "Ubuntu Monospace",
+    "Source Code Pro",
+    "Fira Mono",
+    "Droid Sans Mono",
+    "Courier New",
+    monospace
+  );
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono); /* Default to mono font */
+  /* Basic CRT Scanline Effect */
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll from pseudo-elements */
+}
+
+body::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 2px, 3px 100%;
+  z-index: 2; /* Ensure it's above background but below content */
+  pointer-events: none; /* Allow clicks through */
+  animation: flicker 0.15s infinite; /* Subtle flicker */
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.5417;
+  }
+  15% {
+    opacity: 0.23604;
+  }
+  20% {
+    opacity: 0.6245;
+  }
+  25% {
+    opacity: 0.38438;
+  }
+  30% {
+    opacity: 0.6133;
+  }
+  35% {
+    opacity: 0.36455;
+  }
+  40% {
+    opacity: 0.2143;
+  }
+  45% {
+    opacity: 0.47778;
+  }
+  50% {
+    opacity: 0.8181;
+  }
+  55% {
+    opacity: 0.1968;
+  }
+  60% {
+    opacity: 0.47607;
+  }
+  65% {
+    opacity: 0.3834;
+  }
+  70% {
+    opacity: 0.1519;
+  }
+  75% {
+    opacity: 0.3188;
+  }
+  80% {
+    opacity: 0.20177;
+  }
+  85% {
+    opacity: 0.16002;
+  }
+  90% {
+    opacity: 0.2838;
+  }
+  95% {
+    opacity: 0.13139;
+  }
+  100% {
+    opacity: 0.2278;
+  }
 }

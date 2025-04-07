@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IBreakDevs
 
-## Getting Started
+<div align="center">
+  <h3>A competitive coding duel platform pitting humans against AI</h3>
+  <p>Challenge AI models to solve coding tasks and have your solutions judged fairly</p>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+  [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-green)](https://openai.com/)
+  [![E2B](https://img.shields.io/badge/E2B-Code%20Interpreter-orange)](https://e2b.dev/)
+</div>
 
-First, run the development server:
+> **⚠️ IMPORTANT NOTE: This project is a work in progress and not yet finished. Many features are still under development.**
+
+## 🚀 Overview
+
+IBreakDevs is a competitive coding platform where developers can challenge AI models to solve programming tasks. The application provides a real-time coding environment where both the human and AI write solutions to the same problem, which are then executed and judged fairly.
+
+## ✨ Features
+
+- **🤖 AI Opponents**: Compete against OpenAI's GPT-4o model
+- **💻 Real-time Coding**: Watch the AI generate its solution in real-time
+- **⚡ Code Execution**: Both human and AI solutions are executed in secure sandboxes
+- **🧠 Fair Judging**: Solutions are evaluated on correctness, efficiency, and style
+- **🏆 Scoring System**: Track your performance across multiple rounds
+- **🎮 Game Mechanics**: Engaging competitive format with multiple rounds
+- **💬 AI Banter**: Enjoy light-hearted competitive banter from your AI opponent
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **State Management**: Zustand with Immer
+- **Code Execution**: E2B Code Interpreter
+- **AI Integration**: OpenAI API with GPT-4o
+- **Real-time Communication**: WebSockets for streaming AI responses
+- **Code Editor**: Monaco Editor (VS Code's editor)
+
+## 🏁 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repository
+git clone https://github.com/yourusername/ibreakdevs.git
+cd ibreakdevs
+
+# Install dependencies
+pnpm install
+
+# Start the development server
 pnpm dev
-# or
-bun dev
+
+# In a separate terminal, start the WebSocket server
+pnpm websocket
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
