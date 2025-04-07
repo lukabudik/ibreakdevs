@@ -1,6 +1,0 @@
-[build]
-builder = "nixpacks"
-
-[deploy]
-startCommand = "tsx --require dotenv/config src/websocket-server.ts"
-healthcheckTimeout = 100
