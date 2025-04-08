@@ -27,6 +27,15 @@ export default function GameSetup() {
       </pre>
       <h2 className="text-xl font-semibold mb-4">Game Setup</h2>
       <p className="mb-4">Prepare for battle! (Defaults: Python, GPT-4o)</p>
+      <div className="mb-6 p-3 border border-yellow-500 bg-yellow-900/30 text-yellow-300 max-w-md text-center text-sm">
+        <p className="mb-2">
+          <strong>⚠️ WORK IN PROGRESS ⚠️</strong>
+        </p>
+        <p>
+          This application is still under active development and may not
+          function perfectly. We&apos;re continuously working to improve it.
+        </p>
+      </div>
       <button
         onClick={handleStart}
         className="px-4 py-2 border-2 text-white hover:bg-gray-800 transition-colors"
