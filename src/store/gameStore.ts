@@ -269,8 +269,14 @@ const gameStoreCreator: StateCreator<
     set({ playerCode: code });
   },
 
-  appendAIStreamChunk: () => {},
-  setAICodeFinal: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  appendAIStreamChunk: (chunk: string) => {
+    // No-op: Handled by WebSocket messages now
+  },
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  setAICodeFinal: (code: string) => {
+    // No-op: Handled by WebSocket messages now
+  },
 
   submitCode: async () => {
     const {

@@ -131,8 +131,7 @@ async function getJudgeFeedback(
   playerCode: string,
   playerResult: E2BExecutionResult,
   aiCode: string,
-  aiResult: E2BExecutionResult,
-  _history: OpenAIMessage[] // History might be used later for context, keep param but mark unused
+  aiResult: E2BExecutionResult
 ): Promise<JudgeResult> {
   console.log("Calling OpenAI Judge LLM...");
 
@@ -326,8 +325,7 @@ export async function POST(request: Request) {
       playerCode,
       playerResult,
       aiCodeFinal,
-      aiResult,
-      llmConversationHistory
+      aiResult
     );
 
     // --- 3. Update History (Part 1) ---
